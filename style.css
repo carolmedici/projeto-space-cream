@@ -26,6 +26,19 @@
     font-size: 62.5%;
     
 }
+@media (max-width: 700px){
+  .imageC{
+      display: none;
+  }
+
+  .imageE{
+    display: none;
+  }
+
+
+footer{
+ display: none;
+}
 
 header{
     background-color: var(--cor-cabecalho);
@@ -76,7 +89,7 @@ body{
     
   }
 
-  .image{
+  .imageA, .imageB, .imageD, .imageF {
     position: relative;
     animation: downtop 600ms 250ms backwards;
     display: flex;
@@ -91,14 +104,14 @@ body{
     
 }
 
-.image:hover {
+.imageA:hover, .imageB:hover, .imageC:hover, .imageD:hover, .imageE:hover, .imageF:hover{
   transform: scale(1.1);
-  opacity: 0.5;
+          opacity: 0.5;
 
-}
+    }
   
 
-.image h2 {
+.imageA h2, .imageB h2, .imageC h2, .imageD h2, .imageE h2, .imageF h2 {
     position: absolute;
     top: 1.6rem;
     right: 1.6rem;
@@ -120,7 +133,7 @@ body{
 
     animation: topdown 800ms 250ms backwards;
   }
-
+}
   @keyframes downtop {
     0% {
       opacity: 0;
@@ -144,4 +157,168 @@ body{
           transform: translateY(0);
         }
       }
-  
+
+     
+   
+      
+      @media (min-width: 750px) {
+      
+        header{
+          background-color: var(--cor-cabecalho);
+          height: 70vh;
+          width: 380px;
+          margin: 0 ;
+         
+      
+      }
+      
+      .logo{
+          margin-top: 30px;
+          text-align: center;
+      }
+      
+      p{ 
+          background-color: var(--cor-cabecalho);
+          height: 100%;
+          width: 380px;
+          margin: 0;
+          position: absolute;
+          top: 250px;
+          left: 0;
+          padding: 30px;
+          font-family: var(--font-texto);
+          color: white;
+          font-weight: 400;
+          font-size: 1.6rem;
+          line-height: 2rem;
+          text-align: center;
+      }
+      
+      
+      h1{
+          background-color: var(--cor-faixa);
+          color: white;
+          text-align: center;
+          font-family: var(--font-titulo);
+          letter-spacing: 0.05em;
+          text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+          font-size: 4rem;
+          font-style: normal;
+          font-weight: 400;
+          width: 380px;
+          position: absolute;
+          left: 0;
+          animation: topdown 800ms 250ms backwards;
+          
+          
+          
+      }
+        
+        .page{
+          display: flex;
+      }
+      
+      
+      
+      .fotos{
+          position: absolute;
+          left: 450px;
+          margin-right: 50px;
+          top: 65px;
+          display: grid;
+          grid-gap: 2rem; 
+          grid-template-columns: repeat(9, 1fr);
+          grid-template-rows: repeat(9, 5vw);
+          
+      }
+          
+      
+       .imageA {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 3;
+      }
+      
+      .imageB {
+          grid-column-start: 4;
+          grid-column-end: 6;
+          grid-row-start: 1;
+          grid-row-end: 6;
+      }
+      
+      .imageC {
+          grid-column-start: 7;
+          grid-column-end: 9;
+          grid-row-start: 1;
+          grid-row-end: 3;
+      }
+      
+      .imageD {
+          grid-column-start: 4;
+          grid-column-end: 6;
+          grid-row-start: 6;
+          grid-row-end: 9;
+      }
+      
+      .imageE {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 4;
+          grid-row-end: 9;
+      }
+      
+      .imageF {
+          grid-column-start: 7;
+          grid-column-end: 9;
+          grid-row-start: 4;
+          grid-row-end: 9;
+          
+      }
+      
+      
+      
+      h2 {
+          color: transparent;
+          background-color: transparent
+      }
+        
+      
+      footer{
+          position: absolute;
+          color: var(--cor-texto);
+          top: 900px;
+          padding-left: 435px;
+          text-align: center;
+          font-family: var(--font-footer);
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 28px;
+          
+          
+      
+      }
+      
+      a{
+      text-decoration: none;
+      color: var(--font-texto);
+      }
+      
+      a:hover{
+          text-decoration: underline;
+          font-weight: bold;
+      }
+      .imageA, .imageB, .imageC, .imageD, .imageE, .imageF{
+      transition: all 100ms;
+      width: 320px;
+      height: auto;
+      border-radius: 20px;
+      
+  }
+  .imageA:hover, .imageB:hover, .imageC:hover, .imageD:hover, .imageE:hover, .imageF:hover{
+  transform: scale(1.1);
+          opacity: 0.5;
+
+    }
+  }
